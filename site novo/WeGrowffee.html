@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeGrowffee</title>
+    <link rel="stylesheet" href="wegrowffee.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Quem Somos</a></li>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Simule</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="sol.png" id="sun">
+        <img src="nuvem.png" id="cloud">
+        <h2 id="texto">WeGrowffee</h2>
+        <img src="montanhas.png" id="montain">
+        <img src="plantação.png" id="plant">
+        <img src="mesa.png" id="table">
+    </section>
+
+    <div class="men">
+        <h2>Quem Somos</h2>
+        <p>
+            LLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed dignissim quam. <br>
+            Phasellus non ex nec lorem placerat feugiat a eget urna. In egestas facilisis lacus, in euismod justo tempus vel. <br>
+            Quisque in tortor nunc. Duis vel facilisis velit, sit amet imperdiet neque. Quisque faucibus condimentum sapien. <br>
+            Etiam vestibulum dui nec erat ullamcorper, ut vulputate ante elementum. Vestibulum sed diam sed sapien pulvinar bibendum vitae egestas enim. <br>
+            Interdum et malesuada fames ac ante ipsum primis in faucibus. <br>
+            Praesent a velit suscipit, blandit erat eget, aliquet lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+            Phasellus in aliquam sapien, a varius odio. Donec eleifend volutpat magna, sit amet tincidunt tortor hendrerit vel. <br>
+            Nullam a porta elit. Aenean vitae ornare orci. Cras bibendum laoreet neque, nec sagittis arcu posuere ut. Aenean et volutpat velit. <br>
+            Aliquam sed viverra ipsum, in dignissim orci. Nunc fringilla aliquam dolor, nec varius arcu ornare sed. Donec fringilla vel massa nec auctor. <br>
+            Curabitur mattis sollicitudin lacus, in porttitor purus consectetur vitae. <br>
+            Donec tincidunt, purus ac commodo sodales, metus orci luctus magna, fringilla hendrerit elit nisl sit amet nulla. <br>
+            Donec imperdiet pharetra lorem, sit amet congue urna eleifend in. Quisque placerat blandit ligula, tincidunt efficitur lorem condimentum id. <br>
+            Ut vitae semper enim, non rutrum nisl. Phasellus ultricies nulla nunc, quis fermentum arcu elementum ac. Donec placerat tempor urna, et scelerisque nunc tempor porttitor. <br>
+            Sed viverra eu orci in bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ac leo blandit, ultricies nunc at, venenatis nulla. Vivamus maximus bibendum enim eget mattis. <br>
+            Etiam dictum tellus ut interdum tempor. Vestibulum rhoncus varius felis, sit amet maximus nisi laoreet a. Proin id elit lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <br>
+            Etiam vel consequat odio, ut euismod lorem. Cras mollis purus felis, non malesuada urna cursus in. Integer tristique molestie odio a ullamcorper. Sed consectetur nisi ut justo dignissim, sed dignissim felis gravida. <br>
+            Duis commodo malesuada facilisis. Ut at mi porta augue tincidunt iaculis sit amet eu justo. Maecenas ornare varius velit, vitae finibus odio consequat nec. Quisque venenatis tellus ut justo finibus lacinia. <br>
+            Cras vitae dignissim libero. Mauris a ex neque. Praesent nisl risus, facilisis et dolor at, lobortis pretium ex. Suspendisse lacinia lorem vitae diam molestie iaculis. Quisque gravida elit aliquam, porttitor metus at, malesuada lectus. <br>
+            Phasellus odio diam, congue vel facilisis sit amet, volutpat sed ex. Pellentesque vitae enim eu elit laoreet tincidunt sed scelerisque sapien. Vestibulum eget tincidunt magna. Donec pellentesque et purus ut tristique. Sed finibus risus et ultricies ultricies. <br>
+            Donec ipsum est, varius rutrum sapien sit amet, lobortis varius magna. Phasellus feugiat ultrices convallis. Sed faucibus, orci vel mattis sollicitudin, eros ante laoreet enim, vitae maximus nulla arcu a nulla. Vivamus a quam tristique, tempus dolor in, semper nisl. <br>
+            Morbi viverra pretium auctor. Maecenas at nisl vitae ex ornare ullamcorper ac nec enim.
+        </p>
+    </div>
+
+    <script>
+        let sun = document.getElementById('sun');
+        let cloud = document.getElementById('cloud');
+        let texto = document.getElementById('texto');
+        let montain = document.getElementById('montain');
+        let plant = document.getElementById('plant');
+        let table = document.getElementById('table');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            sun.style.top = value * 0.9 + 'px';
+            cloud.style.top = value * 0.5 + 'px';
+            montain.style.top = value * 0.7 + 'px';
+            plant.style.top = value * 0.6 + 'px';
+            texto.style.right = -100 + value * 0.5 + '%';
+            texto.style.top = 50 + value * 0.1 + '%';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+
+
+        const toggleMenu = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.onclick = function(){
+            toggleMenu.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+    <footer>
+        
+    </footer>
+</body>
+</html>
